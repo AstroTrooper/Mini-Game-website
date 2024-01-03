@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    font-family:'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    color: #fff;
+}
+
+.header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100px;
+    padding: 30px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color: #01003f;
+    border-radius: 20px;
+    margin-left: 70px;
+    margin-top: 20px;
+    transition: transform 0.2s;
+}
+
+.logo{
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600;
+}
+.navbar a{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    margin: 0 20px;
+    transition: .3s;
+}
+.navbar a:hover,
+.navbar a.active{
+    color:#42c1e8;
+}
+.btn{
+    padding: 10px 28px;
+    background: #42c1e8;
+    border: 2px solid #42c1e8;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #01003f;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.section1{
+    /* background-color: #42c1e8; */
+    margin-top: 150px;
+    display: flex;
+    height: 500px;
+    width: 700px;
+    background-color: #42c1e8;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,1 )),url(pictures/slope.png);;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+.nav--hidden{
+    transform: translateY( -120px);
+}
+.pose {
+    color: #000;
+    width: 600px;
+    margin-left: 750px;
+    margin-top: -280px;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+.pose h3{
+    color:#01003f;
+}
+button{
+    padding: 10px 28px;
+    background: #42c1e8;
+    border: 2px solid #42c1e8;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #01003f;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-top: 20px;
+    width: 200px;
+    transition: 0.1s ease-in-out;
+}
+button:hover{
+    background-color: #01003f;
+    color: #42c1e8;
+    border:  2px solid #01003f;
+    font-weight: bold;
+    box-shadow:  0 0 10px #01003f;
+    cursor: pointer;
+}
+
