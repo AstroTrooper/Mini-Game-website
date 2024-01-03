@@ -27,6 +27,10 @@ body{
     font-size: 25px;
     color: #fff;
     font-weight: 600;
+    position :relative;
+}
+.navbar{
+    position: relative;
 }
 
 .navbar a{
@@ -57,6 +61,7 @@ body{
 }
 
 .home-content h1{
+    position: relative;
     font-size: 45px;
     line-height: 1.2;
 }
@@ -67,15 +72,16 @@ body{
     color: transparent;
 }
 .home-content p{
+    position: relative;
     font-size: 16px;
     margin: 25px 0 30px;
 }
 
 .home-content .btn-box{
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 345px;
-
 }
 
 .btn{
@@ -98,4 +104,36 @@ body{
 .btn-box .btn:nth-child(2):hover{
     background: #42c1e8;
     color: #01003f;
+}
+.btn.sign-up{
+    position:relative;
+    border: none;
+}
+
+.animate{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background:#01003f;
+    animation: show-right 1s ease-out forwards;
+    animation-delay:calc(.3s*var(--i)) ;
+}
+.animate.bg{
+    animation: fade-in 1s ease-out forwards;
+    animation-delay: 3.2s;
+
+}
+/* KEY FRAMES ANIMATION */
+@keyframes show-right {
+    100%{
+        width: 0;
+    }
+}
+
+@keyframes fade-in {
+    100%{
+        opacity: 0;
+    }
 }
