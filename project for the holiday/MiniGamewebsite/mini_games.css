@@ -9,7 +9,6 @@
 body{
     color: #fff;
 }
-
 .header{
     position: fixed;
     top: 0;
@@ -21,6 +20,7 @@ body{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    
 }
 
 .logo{
@@ -50,30 +50,35 @@ body{
     font-weight: 600;
 }
 .section1{
-    /* background-color: #42c1e8; */
-    margin-top: 150px;
+     margin-top: 130px;
+    margin-left: 10px; 
     display: flex;
-    height: 500px;
+
+}
+.section1 span{
+    display:flex;
+    height: 550px;
     width: 700px;
-    background-color: #42c1e8;
-    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,1 )),url(pictures/slope.png);;
+    background-image: linear-gradient(rgba(0,0,0,.1),rgba(0,0,0)),url(pictures/slope.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-left: 10px;
     border-radius: 10px;
+    margin-top: 20px;
+    outline:  #42c1e8;
 }
 .nav--hidden{
     transform: translateY( -120px);
+    transition: 1s;
 }
 .pose {
     color: #000;
     width: 600px;
-    margin-left: 750px;
-    margin-top: -280px;
     background-color: rgba(0,0,0,0.1);
     border-radius: 10px;
     padding: 20px;
+    height: 270px;
+    margin-top: 50px;
 }
 .pose h3{
     color:#01003f;
@@ -89,9 +94,10 @@ button{
     font-weight: 600;
     margin-top: 20px;
     width: 200px;
-    transition: 0.1s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 button:hover{
+    transition: .3s;
     background-color: #01003f;
     color: #42c1e8;
     border:  2px solid #01003f;
@@ -100,7 +106,7 @@ button:hover{
     cursor: pointer;
 }
 
-.animate{
+/* .animate{
     position: absolute;
     top: 0;
     right: 0;
@@ -126,4 +132,124 @@ button:hover{
     100%{
         opacity: 0;
     }
+} */
+.wrapper{
+    display: block;
+    padding: 20px;
+    margin-bottom: 70px;
+}
+a{
+    text-decoration: none;
+}
+
+input {
+    display: none;
+}
+.container {
+    height: 45%;
+    display: flex;
+    transform-style: preserve-3d;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+    margin-right: 100px;
+}
+.cards {
+    height: 100px;
+    width: 90px;
+    perspective: 1000px;
+    transform-style:preserve-3d;
+}
+.cards label {
+    position: absolute;
+    width: 330px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.55s ease;
+    border-radius: 10px;
+}
+.cards .card{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+}
+.card .image img{
+    border-radius: 5px;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, .1);
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+#s1:checked~.cards #slide4,
+#s2:checked~.cards #slide5,
+#s3:checked~.cards #slide1,
+#s4:checked~.cards #slide2,
+#s5:checked~.cards #slide3 {
+    box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 0.1);
+    transform: translate3d(-70%, 0, -220px);
+    --current-color1: #ECEAED;
+    --current-color2: #404457;
+}
+
+#s1:checked~.cards #slide5,
+#s2:checked~.cards #slide1,
+#s3:checked~.cards #slide2,
+#s4:checked~.cards #slide3,
+#s5:checked~.cards #slide4 {
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1);
+    transform: translate3d(-35%, 0, -120px);
+    --current-color1: #ECEAED;
+    --current-color2: #404457;
+}
+
+#s1:checked~.cards #slide1,
+#s2:checked~.cards #slide2,
+#s3:checked~.cards #slide3,
+#s4:checked~.cards #slide4,
+#s5:checked~.cards #slide5 {
+    box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.2);
+    transform: translate3d(0, 0, 0);
+    --current-color1: #fad00c;
+    --current-color2: #ECEAED;
+}
+
+#s1:checked~.cards #slide2,
+#s2:checked~.cards #slide3,
+#s3:checked~.cards #slide4,
+#s4:checked~.cards #slide5,
+#s5:checked~.cards #slide1 {
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1);
+    transform: translate3d(35%, 0, -120px);
+    --current-color1: #ECEAED;
+    /* --current-color2: #404457; */
+}
+
+#s1:checked~.cards #slide3,
+#s2:checked~.cards #slide4,
+#s3:checked~.cards #slide5,
+#s4:checked~.cards #slide1,
+#s5:checked~.cards #slide2 {
+    box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 0.1);
+    transform: translate3d(70%, 0, -220px);
+    --current-color1: #ECEAED;
+    /* --current-color2: #404457; */
+}
+.section2{
+    margin-top: 130px;
+    margin-left: 10px; 
+    display: flex;
+}
+.section2 span{
+    display:flex;
+    height: 550px;
+    width: 700px;
+    background-image: linear-gradient(rgba(0,0,0,.1),rgba(0,0,0)),url(pictures/slope.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    margin-top: 20px;
+    outline:  #42c1e8;
 }
