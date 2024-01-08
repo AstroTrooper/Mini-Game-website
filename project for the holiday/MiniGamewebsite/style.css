@@ -118,11 +118,11 @@ body{
     height: 100%;
     background:#01003f;
     animation: show-right 1s ease-out forwards;
-    animation-delay:calc(.3s*var(--i)) ;
+    animation-delay:calc(.5s*var(--i)) ;
 }
 .animate.bg{
     animation: fade-in 1s ease-out forwards;
-    animation-delay: 3.2s;
+    animation-delay: 3.6s;
 
 }
 /* KEY FRAMES ANIMATION */
