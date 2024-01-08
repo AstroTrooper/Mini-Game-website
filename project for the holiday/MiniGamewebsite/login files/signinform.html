@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mini Games</title>
-  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="signup.css">
 </head>
 <body>
   <div class="login-box">
@@ -12,28 +12,42 @@
       <div class="login-light"></div>
 
 
-      <h2>Login</h2>
+      <h2>Sign Up</h2>
       <div class="input-box">
-        <span class="icon">
+        <!-- <span class="icon">
+          <ion-icon name="lock-closed"></ion-icon>
+        </span> -->
+        <input type="text" required>
+        <label>UserName</label>
+      </div>
+      <div class="input-box">
+          <span class="icon">
           <ion-icon name="mail"></ion-icon>
         </span>
         <input type="email" required>
-        <label>Email</label>
+        <Label>Email</Label>
       </div>
       <div class="input-box">
         <span class="icon">
-          <ion-icon name="lock-closed"></ion-icon>
-        </span>
-        <input type="password" required>
-        <Label>Password</Label>
+        <ion-icon name="lock-closed"></ion-icon>
+      </span>
+      <input type="password" required>
+      <Label>Password</Label>
       </div>
+      <div class="input-box">
+        <span class="icon">
+        <ion-icon name="lock-closed"></ion-icon>
+      </span>
+      <input type="password" required>
+      <Label>Comfirm Password</Label>
+
+  </div>
       <div class="remember-forgot">
         <Label><input type="checkbox">Remember me</Label>
-        <a href="#">Forgot Password</a>
       </div>
       <button type="submit">Login</button>
       <div class="register-link">
-        <p>Dont have an account<a href="signinform.html"> Sign Up</a></p>
+        <p>Already Have an Account<a href="login.html"> Login</a></p>
       </div>
     </form>
   </div>
