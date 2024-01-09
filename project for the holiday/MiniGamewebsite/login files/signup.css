@@ -14,6 +14,7 @@ body{
     align-items: center;
     min-height: 100vh;
     background: #000;
+    overflow: hidden;
 }
 
 .login-box{
@@ -31,15 +32,34 @@ h2{
     font-size: 2em;
     color: #fff;
     text-align: center;
+    transition: .5s ease;
+}
+.input-check:checked~h2 {
+    color: #e60d0d;
+    text-shadow: 
+    0 0 15px #e60d0d,
+    0 0 30px #e60d0d;
 }
 .input-box{
     position: relative;
     width: 310px;
     margin: 30px 0;
-    border-bottom: 2px solid #fff;
+    /* border-bottom: 2px solid #fff; */
 
 }
-
+.input-box .input-line {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2.5px;
+    background: #fff;
+    transition: .5s ease;
+}
+.input-check:checked~.input-box .input-line{
+    background: #e60d0d;
+    box-shadow: 0 0 10px #e60d0d;
+}
 .input-box label{
     position: absolute;
     top: 50%;
@@ -54,6 +74,12 @@ h2{
 .input-box input:valid~label{
     top: -5px;
 }
+
+.input-check:checked~ .input-box label {
+    color: #e60d0d;
+    text-shadow: 
+    0 0 15px #e60d0d;
+}
 .input-box input{
     width: 100%;
     height: 50px;
@@ -63,16 +89,26 @@ h2{
     font-size: 1em;
     color: #fff;
     padding: 0 35px  0 5px;
-
+    transition: .5s ease;
 }
-
+.input-check:checked~.input-box input{
+    color: #e60d0d;
+    text-shadow: 
+    0 0 5px #e60d0d;
+}
 .input-box .icon{
     position: absolute;
     right: 8px;
     color: #fff;
     font-size: 1.2em;
     line-height: 57px;
+    transition: .5s ease;
 }
+.input-check:checked~.input-box .icon {
+    color: #e60d0d;
+    filter: drop-shadow(0 0 5px #e60d0d);
+}
+
 
 .remember-forgot{
     color: #fff;
@@ -80,18 +116,32 @@ h2{
     margin: -15px 0 15px;
     display: flex;
     justify-content: space-between;
+    transition: .5s ease;
 }
 
+.input-check:checked~.remember-forgot {
+    color: #e60d0d;
+    text-shadow: 
+    0 0 15px #e60d0d;
+}
 .remember-forgot label input{
     accent-color: #fff;
     margin-right: 3px;
+    transition: .5s ease;
 }
+.input-check:checked~.remember-forgot label input {
+   accent-color: #e60d0d;
+}
+
 
 .remember-forgot a{
     color: #fff;
     text-decoration: none;
+    transition: color .5s ease;
 }
-
+.input-check:checked~.remember-forgot a {
+    color: #e60d0d;
+}
 .remember-forgot a:hover{
     text-decoration: underline;
 }
@@ -103,7 +153,12 @@ button{
     border: none;
     border-radius: 10px;
     outline: none;
-    cursor: pointer;   
+    cursor: pointer;  
+    transition: .5s ease; 
+}
+.input-check:checked~button {
+    background: #e60d0d;
+    box-shadow: 0 0 10px #e60d0d, 0 0 15px #e60d0d;
 }
 
 .register-link{
@@ -111,24 +166,132 @@ button{
     font-size:.9em ;
     text-align: center;
     margin: 25px 0 10px;
+    transition: .5s ease;
+}
+.input-check:checked~.register-link {
+    color: #e60d0d;
+    text-shadow: 
+    0 0 15px #e60d0d;
 }
 .register-link p a {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
+    transition:color .5s ease;
+}
+.input-check:checked~.register-link p a {
+    color: #e60d0d;
 }
 
 .register-link p a:hover{
     text-decoration: underline;
 }
 
-.login-light{
+ .login-light{
     position: absolute;
-    top: -123px;
+    top: -30px; 
+     left: 50%;  
+    transform: translateX(-50%);
+   width: 500px;
+   height: 10px;
+   background: #e60d0d;
+   border-radius: 20px;
+}
+.login-light::before {
+    content: '';
+    position: absolute;
+    top: -900px;
+    width: 100%;
+    height: 950px;
+    background: linear-gradient(to bottom, rgba(255,255,255,.3) -50%, rgba(255,255,255,0)90%);
+   clip-path:  polygon(20% 0,80% 0, 100% 100%, 0 100%);
+   pointer-events: none;
+   transition: .5s ease;
+}
+
+.input-check:checked~.login-light::before{
+    top: 0;
+}
+
+
+.toggle{
+    position: absolute;
+    top: 20px;
+    right: -70px;
+    width: 60px;
+    height: 120px;
+    background: #191919;
+    border-radius: 10px;
+}
+
+
+.toggle::after{
+    content: '';
+    position: absolute;
+    top: 5px;
     left: 50%;
     transform: translateX(-50%);
-    width: 500px;
-    height: 10px;
-    background: #00f7ff;
+    width: 45px;
+    height: 45px;
+    background: #333;
+    border: 2px solid #191919;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    transition: .5s ease;
 
 }
+.input-check:checked~.toggle::after {
+    top: 65px;
+}
+
+
+.input-check{
+    position: absolute;
+    right: -70px;
+    z-index: 1;
+    opacity: 0;
+}
+
+.toggle .text {
+    position: absolute;
+    top: 17px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 1em;
+    z-index: 1;
+    transition: .5s ease;
+}
+.toggle .text.off{
+    opacity: 1;
+}
+
+.input-check:checked~.toggle .text.off {
+    top: 76px;
+    opacity: 0;
+}
+
+.toggle .text.on {
+    opacity: 0;
+}
+
+.input-check:checked~.toggle .text.on {
+    top: 76px;
+    opacity:1 ;
+    color: #e60d0d;
+    text-shadow: 
+    0 0 15px #e60d0d,
+    0 0 30px #e60d0d,
+    0 0 45px #e60d0d,
+    0 0 60px #e60d0d;
+}
+
+/* .back-button{
+    position: absolute;
+    width: 20px;
+    height: 15px;
+    background: #fff;
+    left: 15px;
+    size-adjust: 30px;
+} */

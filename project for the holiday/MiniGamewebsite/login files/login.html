@@ -9,8 +9,13 @@
 <body>
   <div class="login-box">
     <form action="#">
+      <input type="checkbox" class="input-check"
+      id="input-check">
+      <label for="input-check" class="toggle">
+        <span class="text off">Off</span>
+        <span class="text on">On</span>
+      </label>
       <div class="login-light"></div>
-
 
       <h2>Login</h2>
       <div class="input-box">
@@ -19,6 +24,7 @@
         </span>
         <input type="email" required>
         <label>Email</label>
+        <div class="input-line"></div>
       </div>
       <div class="input-box">
         <span class="icon">
@@ -26,6 +32,7 @@
         </span>
         <input type="password" required>
         <Label>Password</Label>
+        <div class="input-line"></div>
       </div>
       <div class="remember-forgot">
         <Label><input type="checkbox">Remember me</Label>
@@ -37,6 +44,11 @@
       </div>
     </form>
   </div>
+  <!-- <div class="back-button">
+    <span class="back">
+      <ion-icon name="chevron-back-circle"></ion-icon>
+    </span>
+  </div> -->
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

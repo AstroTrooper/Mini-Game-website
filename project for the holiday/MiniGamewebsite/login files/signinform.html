@@ -9,16 +9,24 @@
 <body>
   <div class="login-box">
     <form action="#">
+      <input type="checkbox" class="input-check"
+      id="input-check">
+      <label for="input-check" class="toggle">
+        <span class="text off">Off</span>
+        <span class="text on">On</span>
+      </label>
       <div class="login-light"></div>
 
 
       <h2>Sign Up</h2>
       <div class="input-box">
-        <!-- <span class="icon">
-          <ion-icon name="lock-closed"></ion-icon>
-        </span> -->
+         <span class="icon">
+          <ion-icon name="person"></ion-icon>
+        </span> 
         <input type="text" required>
         <label>UserName</label>
+        <div class="input-line"></div>
+
       </div>
       <div class="input-box">
           <span class="icon">
@@ -26,6 +34,8 @@
         </span>
         <input type="email" required>
         <Label>Email</Label>
+        <div class="input-line"></div>
+
       </div>
       <div class="input-box">
         <span class="icon">
@@ -33,6 +43,7 @@
       </span>
       <input type="password" required>
       <Label>Password</Label>
+      <div class="input-line"></div>
       </div>
       <div class="input-box">
         <span class="icon">
@@ -40,12 +51,14 @@
       </span>
       <input type="password" required>
       <Label>Comfirm Password</Label>
+      <div class="input-line"></div>
+
 
   </div>
       <div class="remember-forgot">
         <Label><input type="checkbox">Remember me</Label>
       </div>
-      <button type="submit">Login</button>
+      <button type="submit">Sign In</button>
       <div class="register-link">
         <p>Already Have an Account<a href="login.html"> Login</a></p>
       </div>
