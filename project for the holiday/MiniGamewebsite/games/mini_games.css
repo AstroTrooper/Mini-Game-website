@@ -59,7 +59,7 @@ body{
     display:flex;
     height: 550px;
     width: 700px;
-    background-image: linear-gradient(rgba(0,0,0,.1),rgba(0,0,0)),url(pictures/slope.png);
+    background-image: linear-gradient(rgba(0,0,0,.1),rgba(0,0,0)),url(../pictures/slope.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

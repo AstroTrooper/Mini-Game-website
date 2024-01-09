@@ -118,7 +118,7 @@ body{
     height: 100%;
     background:#01003f;
     animation: show-right 1s ease-out forwards;
-    animation-delay:calc(.5s*var(--i)) ;
+    animation-delay:calc(.1s*var(--i)) ;
 }
 .animate.bg{
     animation: fade-in 1s ease-out forwards;
@@ -131,7 +131,6 @@ body{
         width: 0;
     }
 }
-
 @keyframes fade-in {
     100%{
         opacity: 0;
