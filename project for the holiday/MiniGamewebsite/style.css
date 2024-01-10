@@ -68,7 +68,7 @@ body{
 
 .home-content h1:nth-child(3){
     background: linear-gradient(#59ffff,#1952ab);
-    -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
 }
 .home-content p{

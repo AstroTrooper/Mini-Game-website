@@ -223,7 +223,7 @@ input {
     box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1);
     transform: translate3d(35%, 0, -120px);
     --current-color1: #ECEAED;
-    /* --current-color2: #404457; */
+    --current-color2: #404457;
 }
 
 #s1:checked~.cards #slide3,
@@ -234,7 +234,7 @@ input {
     box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 0.1);
     transform: translate3d(70%, 0, -220px);
     --current-color1: #ECEAED;
-    /* --current-color2: #404457; */
+    --current-color2: #404457;
 }
 .section2{
     margin-top: 130px;
@@ -245,7 +245,7 @@ input {
     display:flex;
     height: 550px;
     width: 700px;
-    background-image: linear-gradient(rgba(0,0,0,.1),rgba(0,0,0)),url(pictures/slope.png);
+    background-image: linear-gradient(rgba(0,0,0,.1),rgba(0,0,0)),url(../pictures/slope.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
