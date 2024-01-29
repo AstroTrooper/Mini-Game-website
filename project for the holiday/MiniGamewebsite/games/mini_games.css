@@ -254,3 +254,34 @@ input {
     margin-top: 20px;
     outline:  #42c1e8;
 }
+.section_message{
+    justify-content: center;
+    position: relative;
+    padding: 25px;
+    width: 700px;
+    height: 300px;
+    background-color: #3311f4;
+    border-radius: 20px;
+    margin-top:20px;
+    margin-left:300px;
+    box-shadow: 0 0 20px #000;  
+    align-items: center;
+    display: flex;
+}
+.section_message p{
+    font-size: 25px;
+    text-shadow: 0 0 10px #000;
+    text-rendering: geometricPrecision;
+    animation: enlarge 2s infinite ease-in-out;
+    transition: 1s;
+}
+.section_message span{
+    color: #42c1e8;
+    font-size: 30px;
+    cursor: help;
+}
+@keyframes enlarge{
+    25%{
+        font-size: 27px;
+    }
+}
